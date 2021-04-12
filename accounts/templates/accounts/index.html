@@ -1,14 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+{% extends 'accounts/homebase.html' %}
+{% load static %}
 
-    <h1>Menu</h1>
+{% block content %}
+
+<head>
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/bg.jpg" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .jumbotron h5,
+    h3 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+  </style>
 </head>
-<body>
-    
-</body>
-</html>
+<br>
+<br>
+
+<div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+  <br>
+  <h5 class="display-3 glow">Sobre</h5>
+  <br><br><br><br><br>
+  <p>
+  <h3>Cadastra-se</h3>
+  <br><br>
+</div> 
+
+<br><br><br><br>
+
+{% include "accounts/admin_doctor_patient_card.html" %}
+<br><br><br>
+
+{% endblock content %}
