@@ -31,7 +31,6 @@ class Paciente(models.Model):
     email = models.CharField(max_length=100, null=True)
     fone = models.CharField(max_length=20, null=True)
     sintomas = models.CharField(max_length=100, null=True)
-    assignedDoctorId = models.PositiveIntegerField(null=True)
     status = models.BooleanField(default=True)
     @property
     def get_name(self):

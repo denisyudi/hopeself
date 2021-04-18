@@ -1,38 +1,162 @@
-{% extends 'accounts/medico_base.html' %}
+<!DOCTYPE html>
 {% load static %}
-{% block content %}
-{%include 'accounts/doctor_dashboard_cards.html'%}
-<br><br><br><br>
-<div class="container">
-  <div class="row">
-    <div class="panel panel-primary" style="margin-left:15%;">
-      <div class="panel-heading" style="text-align:center;">
-        <h6 class="panel-title">Recent Appointments For You</h6>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Paciente</title>
+    <style>
+        *{
+            font-family: 'Roboto', sans-serif;
+        }
+        body{
+            background-color: #C4C4C4;
+        }
+        #navbarNav{
+            justify-content: center;
+            font-size: 18px;
+        }
+        .nav-link{
+            color: #000000 !important;
+            margin: 0px 18px;
+        }
+        .nav-link:hover{
+            font-weight: 500;
+            text-decoration: underline;
+        }
+        .navbar-brand{
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .navbar{
+            padding: 10px 30px;
+        }
+        .dive{
+            padding: 65px;
+        }
+        .calendar{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            padding: 15px 10px 45px 10px;
+        }
+        #calendarTitle{
+            margin: 0px 0px 40px 0px;
+            font-weight: 500;
+            font-size: 30px;
+        }
+        #horarioCalendar{
+            font-weight: 500;
+            font-size: 24px;
+            place-self: flex-start;
+        }
+        #subCalendar{
+            font-size: 20px;
+            opacity: 0.6;
+            place-self: flex-start;
+            margin: 0;
+        }
+        #consultaSelect{
+            background: #FFFFFF;
+            border-radius: 10px;
+            margin: 0px 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #consultaToday{
+            margin: 20px 20px 0px 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #selectTitle{
+            font-weight: 500;
+            font-size: 30px;
+        }
+        #todayTitleOne{
+            font-weight: 500;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .fulanoName{
+            font-weight: 500;
+            font-size: 20px;
+            opacity: 0.6;
+        }
+
+        .todayConsultasCards{
+            background: #FFFFFF;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            margin-top: 18px;
+        }
+        #todayTitle{
+            font-weight: 500;
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    {% include "accounts/navbarmedico.html" %}
+    <div class="row justify-content-center dive">
+        <div class="col-8 calendar">
+            <h2 id="calendarTitle">Calendário</h2>
+            <svg class="img-fluid" width="80%" height="303" viewBox="0 0 730 303" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="730" height="303" rx="7" fill="#C4C4C4"/>
+                <line x1="3.18902" y1="4.5371" x2="723.189" y2="298.537" stroke="black"/>
+                <line x1="2.81098" y1="298.537" x2="722.811" y2="4.53711" stroke="black"/>
+            </svg>
+            <div style="display: flex; flex-direction: column; width: 80%; margin: 20px;">
+                <span id="horarioCalendar">Meus horários</span>
+                <p id="subCalendar">Altere aqui sua disponibilidade de horário</p>
+            </div>
+            <svg class="img-fluid" width="80%" height="303" viewBox="0 0 730 303" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="730" height="303" rx="7" fill="#C4C4C4"/>
+                <line x1="3.18902" y1="4.5371" x2="723.189" y2="298.537" stroke="black"/>
+                <line x1="2.81098" y1="298.537" x2="722.811" y2="4.53711" stroke="black"/>
+            </svg>
+        </div>
+        <div class="col-4">
+            <div class="row" id="consultaSelect">
+              <span id="selectTitle">Consulta Selecionada</span>
+              <p>Detalhes da Consulta</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elit eros, tempus eu lectus nec, semper aliquet massa. Nunc tempus sollicitudin sollicitudin. Ut eget hendrerit sem. Sed convallis lorem et libero porttitor, quis pretium dolor fermentum. Vivamus accumsan tincidunt laoreet.</p>
+              <a>Mais detalhes</a>
+            </div>
+            <div class="row" id="consultaToday">
+                <span id="todayTitleOne">Consultas Hoje</span>
+                <div class="todayConsultasCards">
+                    <div style="display: flex; flex-direction: row; align-items: baseline; justify-content: space-between;">
+                        <span id="todayTitle">Consulta X</span>
+                        <p style="margin-left: 20px; opacity: 0.6; font-weight: 500; font-size: 18px;">02:30 PM - 03:30 PM</p>
+                    </div>
+                    <p class="fulanoName">Fulano da Silva</p>
+                </div>
+                <div class="todayConsultasCards">
+                    <div style="display: flex; flex-direction: row; align-items: baseline; justify-content: space-between;">
+                    <span id="todayTitle">Consulta X</span>
+                    <p style="margin-left: 20px; opacity: 0.6; font-weight: 500; font-size: 18px;">02:30 PM - 03:30 PM</p>
+                </div>
+                <p class="fulanoName">Fulano da Silva</p>
+             </div>
+        <div class="todayConsultasCards">
+            <div style="display: flex; flex-direction: row; align-items: baseline; justify-content: space-between;">
+                <span id="todayTitle">Consulta X</span>
+                <p style="margin-left: 20px; opacity: 0.6; font-weight: 500; font-size: 18px;">02:30 PM - 03:30 PM</p>
+            </div>
+            <p class="fulanoName">Fulano da Silva</p>
+        </div>
       </div>
-      <table class="table table-hover" id="dev-table">
-        <thead>
-          <tr>
-            <th>Patient Name</th>
-            <th>Picture</th>
-            <th>Description</th>
-            <th>Mobile</th>
-            <th>Address</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        {% for a,p in appointments %}
-        <tr>
-          <td>{{a.nome_paciente}}</td>
-          <td> <img src="{% static p.profile_pic.url %}" alt="Profile Pic" height="40px" width="40px" /></td>
-          <td>{{a.descricao}}</td>
-          <td>{{p.fone}}</td>
-          <td>{{p.endereco}}</td>
-          <td>{{a.data}}</td>
-        </tr>
-        {% endfor %}
-      </table>
     </div>
   </div>
-</div>
-
-{% endblock content %}
+  {% include "accounts/footer.html" %}
+</body>

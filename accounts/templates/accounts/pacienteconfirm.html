@@ -1,19 +1,22 @@
-{% extends 'accounts/homebase.html' %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-{% block content %}
-
-<br>
-<br>
-
+<head>
+    <meta charset="utf-8">
+    <title>Login do Admin</title>
+</head>
+<body>
+{% include 'accounts/navbar.html' %}
 <div class="jumbotron" style="margin-bottom:0px;">
-  <h1 class="display-4" style="text-align:center;">Olá, paciente</h1>
-  <p class="lead">Bem vindo ao Hopeself</p>
+  <h3 class="display-4" style="text-align:center;">Olá administrador,</h3>
+  <p class="lead" style="color: black">Bem vindo ao Hopeself</p>
   <hr class="my-4">
-  <p>You can access various features after Login/SignUp.</p>
+  <p style="color: black">Acesse</p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="/pacienteregister" role="button">Cadastre sua conta</a>
-    <a class="btn btn-primary btn-lg" href="/patientlogin" role="button">Login</a>
+    <a class="btn btn-primary btn-lg" href="/pacienteregister" role="button">Cadastrar</a>
+    <a class="btn btn-primary btn-lg" href="/pacientelogin" role="button">Login</a>
   </p>
 </div>
-
-{% endblock content %}
+{% include 'accounts/footer.html' %}
+</body>
+</html>

@@ -1,0 +1,49 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #C4C4C4;
+}
+#navbarNav{
+    justify-content: center;
+    font-size: 18px;
+}
+.nav-link{
+    color: #000000 !important;
+    margin: 0px 18px;
+}
+.nav-link:hover{
+    font-weight: 500;
+    text-decoration: underline;
+}
+.navbar-brand{
+    font-weight: bold;
+    font-size: 18px;
+}
+.navbar{
+    padding: 10px 30px;
+}
+#contentTitle{
+    font-weight: 500;
+    font-size: 36px;
+    text-decoration: underline;
+}
+.content{
+    padding: 30px;
+}
+.cards{
+    padding: 15px;
+}
+.col{
+    font-weight: 500;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    margin: 25px;
+    padding: 15px 30px 30px 30px;
+}
+#cardTitle{
+    margin-bottom: 45px;
+}

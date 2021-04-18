@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Consultas</title>
+  <title>Notificações</title>
     <style>
       *{
             font-family: 'Roboto', sans-serif;
@@ -40,17 +40,14 @@
 </head>
 
 <body>
-  {% include "accounts/navbarpaciente.html" %}
+  {% include "accounts/navbarmedico.html" %}
   <div class="content">
-    <span id="contentTitle">CONSULTAS</span>
+    <span id="contentTitle">NOTIFICAÇÕES</span>
     <div class="panel panel-primary">
       <table class="table table-hover" id="dev-table">
         <thead>
           <tr>
-            <th>Médico</th>
-            <th>Especialidade</th>
             <th>Descrição</th>
-            <th>Diagnóstico</th>
             <th>Data</th>
           </tr>
         </thead>

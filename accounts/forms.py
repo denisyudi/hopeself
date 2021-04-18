@@ -32,7 +32,6 @@ class PacienteRegisterForm(forms.ModelForm):
         }
 
 class PacienteForm(forms.ModelForm):
-    assignedDoctorId = forms.ModelChoiceField(queryset=models.Medico.objects.all().filter(status=True), empty_label="Name and Department", to_field_name="user_id")
     class Meta:
         model = models.Paciente
         fields = ['cpf', 'endereco', 'email', 'fone', 'sintomas', 'status']

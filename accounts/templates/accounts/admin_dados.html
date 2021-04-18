@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Cadastro</title>
+    <title>Dados Cadastrais</title>
     <style>
         .panel-heading {
             font-size: 35px;
@@ -71,7 +71,7 @@
 </head>
 
 <body>
-    {% include "accounts/navbar.html" %}
+    {% include "accounts/navbaradmin.html" %}
     <br>
     <form method="post">
     {% csrf_token %}
@@ -83,26 +83,22 @@
                         <br />
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a href="/adminregister" class="title-login">Cadastra-se</a>
+                                <a class="title-login">Atualize</a>
                             </div>
                             <div class="panel-body">
                                 <form class="formulario">
                                     <div class="input-group">
-                                        {% render_field form.first_name class="form-control" placeholder="Nome" %}
+                                        {% render_field form.first_name class="form-control" placeholder=user.first_name %}
                                     </div>
                                     <div class="input-group">
-                                      {% render_field form.last_name class="form-control" placeholder="Sobrenome" %}
+                                      {% render_field form.last_name class="form-control" placeholder=user.last_name %}
                                     </div>
                                     <div class="input-group">
-                                      {% render_field form.username class="form-control" placeholder="Usuário" %}
-                                    </div>
-                                    <div class="input-group">
-                                      {% render_field form.password class="form-control" placeholder="Senha" %}
+                                      {% render_field form.password class="form-control" placeholder="*******" %}
                                     </div>
                                     <div class="btn-cadastrar">
-                                      <button class="btn btn-xm btn-block btn-cadastrar" type="submit">Cadastrar</button>
+                                      <button class="btn btn-xm btn-block btn-cadastrar" type="submit">Atualizar</button>
                                     </div>
-                                    <div class="text-center">Já possui cadastro? <a href="adminlogin">Entre aqui</a></div>
                                 </form>
                             </div>
                         </div>

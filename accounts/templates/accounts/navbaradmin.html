@@ -41,21 +41,34 @@
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div>
-                <a class="navbar-brand" href="/">Hopeself</a>
+                <a class="navbar-brand" href="admin-main">Hopeself</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="admin-main">Geral <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contato <span class="sr-only"></span></a>
+                    <a class="nav-link" href="admin-notificacoes">Notificações <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin-medicos">Médicos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin-pacientes">Pacientes</a>
                 </li>
             </ul>
+            </div>
+            <div>
+                <a href="admin-dados" class="nav-item nav-link"><i class="fas fa-user-alt"></i> {{request.user.first_name}}</a>
+            </div>
+            <div>
+                <a href="/logout" class="nav-item nav-link"><i class="fas fa-sign-out-alt"></i>   Logout</a>
+            </div>
         </nav>
-    </div>
 </body>
 
 </html>

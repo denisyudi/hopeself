@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
@@ -41,21 +42,37 @@
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div>
-                <a class="navbar-brand" href="/">Hopeself</a>
+                <a class="navbar-brand" href="paciente-main">Hopeself</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="paciente-main">Minha Saúde <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contato <span class="sr-only"></span></a>
+                    <a class="nav-link" href="paciente-notificacoes">Notificações <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="paciente-consultas">Minhas consultas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="paciente-historico">Meu Histórico</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="paciente-agendar-consulta">Agendar Consulta!</a>
                 </li>
             </ul>
+            </div>
+            <div>
+                <a href="paciente-dados" class="nav-item nav-link"><i class="fas fa-user-alt"></i> {{request.user.first_name}}</a>
+            </div>
+            <div>
+                <a href="/logout" class="nav-item nav-link"><i class="fas fa-sign-out-alt"></i>   Logout</a>
+            </div>
         </nav>
-    </div>
 </body>
 
 </html>

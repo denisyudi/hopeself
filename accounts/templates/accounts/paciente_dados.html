@@ -1,78 +1,77 @@
 <!DOCTYPE html>
-
 {% load widget_tweaks %}
 <html lang="en" dir="ltr">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Cadastro</title>
+    <title>Dados Cadastrais</title>
     <style>
-      .panel-heading {
-          font-size: 35px;
-          padding-bottom: 40px;
-          margin: auto;
-          text-align: center;
-      }
+        .panel-heading {
+            font-size: 35px;
+            padding-bottom: 40px;
+            margin: auto;
+            text-align: center;
+        }
 
-      a {
-          text-decoration: none !important;
-          color: #000;
-      }
+        a {
+            text-decoration: none !important;
+            color: #000;
+        }
 
-      .form-control::placeholder {
-          color: #000 !important;
-          font-size: 18px;
-      }
-      
-      .form-control {
-          border: none !important;
-          border-bottom: 1px solid !important;
-          background-color: transparent;
-          width: 10% !important;
-      }
+        .form-control::placeholder {
+            color: #000 !important;
+            font-size: 18px;
+        }
+        
+        .form-control {
+            border: none !important;
+            border-bottom: 1px solid !important;
+            background-color: transparent;
+            width: 10% !important;
+        }
 
-      .col-lg-4{
-          background-color: rgb(187, 187, 187);
-          border-radius: 10px;
-          padding: 30px 25px;
-      }
+        .col-lg-4{
+            background-color: rgb(187, 187, 187);
+            border-radius: 10px;
+            padding: 30px 25px;
+        }
 
-      div.btn-cadastrar{
-          width: 100%;
-          margin: auto;
-          text-align: center;
-          padding: 20px 0;
-      }
+        div.btn-cadastrar{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            padding: 20px 0;
+        }
 
-      .input-group{
-          width: 80%;
-          margin: auto !important;
-          padding:5px;
-      }
+        .input-group{
+            width: 80%;
+            margin: auto !important;
+            padding: 5px;
+        }
 
-      .btn-cadastrar{
-          border: solid #fff 2px;
-          padding: 10px 160px;
-          border-radius: 30px;
-          background-color: #fff;
-          font-size: 20px;
-          font-weight: bold;
-      }
+        .btn-cadastrar{
+            border: solid #fff 2px;
+            padding: 10px 160px;
+            border-radius: 30px;
+            background-color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
 
-      .btn-cadastrar:hover{
-          background-color: rgb(187, 187, 187);
-          border: solid black 2px;
-      }
+        .btn-cadastrar:hover{
+            background-color: rgb(187, 187, 187);
+            border: solid black 2px;
+        }
 
-      p.text-separator{
-          text-align: center;
-      }
-  </style>
+        p.text-separator{
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    {% include "accounts/navbar.html" %}
+    {% include "accounts/navbarpaciente.html" %}
     <br>
     <form method="post">
     {% csrf_token %}
@@ -84,21 +83,18 @@
                         <br />
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a href="/pacienteregister" class="title-login">Cadastra-se</a>
+                                <a class="title-login">Atualize</a>
                             </div>
                             <div class="panel-body">
                                 <form class="formulario">
                                     <div class="input-group">
-                                        {% render_field userForm.first_name class="form-control" placeholder="Nome" %}
+                                        {% render_field userForm.first_name class="form-control" placeholder=user.first_name %}
                                     </div>
                                     <div class="input-group">
-                                        {% render_field userForm.last_name class="form-control" placeholder="Sobrenome" %}
+                                        {% render_field userForm.last_name class="form-control" placeholder=user.last_name %}
                                     </div>
                                     <div class="input-group">
-                                        {% render_field userForm.username class="form-control" placeholder="Usuário" %}
-                                    </div>
-                                    <div class="input-group">
-                                        {% render_field userForm.password class="form-control" placeholder="Senha" %}
+                                        {% render_field userForm.password class="form-control" placeholder="*******" %}
                                     </div>
                                     <div class="input-group">
                                         {% render_field pacienteForm.cpf class="form-control" placeholder="CPF" %}
@@ -110,15 +106,14 @@
                                         {% render_field pacienteForm.sintomas class="form-control" placeholder="Sintomas" %}
                                     </div>
                                     <div class="input-group">
-                                        {% render_field pacienteForm.fone class="form-control"  placeholder="Telefone" %}
+                                        {% render_field pacienteForm.fone class="form-control"  placeholder="Fone" %}
                                     </div>
                                     <div class="input-group">
                                         {% render_field pacienteForm.endereco class="form-control" placeholder="Endereço" %}
                                     </div>
                                     <div class="btn-cadastrar">
-                                      <button class="btn btn-xm btn-block btn-cadastrar" type="submit">Cadastrar</button>
+                                      <button class="btn btn-xm btn-block btn-cadastrar" type="submit">Atualizar</button>
                                     </div>
-                                    <div class="text-center">Já possui cadastro? <a href="pacientelogin">Entre aqui</a></div>
                                 </form>
                             </div>
                         </div>

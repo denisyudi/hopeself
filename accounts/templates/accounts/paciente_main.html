@@ -1,13 +1,153 @@
-{% extends 'accounts/patient_base.html' %}
+<!DOCTYPE html>
 {% load static %}
-{% block content %}
-{%include 'accounts/patient_dashboard_cards.html'%}
-<br><br><br><br>
+<html lang="en">
 
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
+<head>
+    <meta charset="UTF-8">
+    <title>Paciente</title>
+    <style>
+      *{
+            font-family: 'Roboto', sans-serif;
+        }
+        body{
+            background-color: #C4C4C4;
+        }
+        #contentTitle{
+            font-weight: 500;
+            font-size: 36px;
+            text-decoration: underline;
+        }
+        .content{
+            padding: 30px;
+        }
+        .cards{
+            padding: 15px;
+        }
+        .col{
+            font-weight: 500;
+            font-size: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #FFFFFF;
+            margin: 25px;
+            padding: 15px 30px 30px 30px;
+        }
+        #cardTitle{
+            margin-bottom: 45px;
+        }
+    </style>
+</head>
 
-{% endblock content %}
+<body>
+    {% include "accounts/navbarpaciente.html" %}
+    <div class="content">
+        <span id="contentTitle">MINHA SAÚDE</span>
+        <div class="cards">
+            <div class="row">
+                <div class="col">
+                    <span id="cardTitle">Dados x</span>
+                    <svg width="223" height="139" viewBox="0 0 223 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="1" width="222" height="137" fill="#C4C4C4"/>
+                        <line x1="0.262583" y1="0.5745" x2="222.263" y2="137.575" stroke="black"/>
+                        <line x1="222.263" y1="1.4255" x2="0.262599" y2="138.425" stroke="black"/>
+                    </svg>    
+                </div>
+                <div class="col">
+                    <span id="cardTitle">Dados x</span>
+                    <svg width="223" height="139" viewBox="0 0 223 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="1" width="222" height="137" fill="#C4C4C4"/>
+                        <line x1="0.262583" y1="0.5745" x2="222.263" y2="137.575" stroke="black"/>
+                        <line x1="222.263" y1="1.4255" x2="0.262599" y2="138.425" stroke="black"/>
+                    </svg>    
+                </div>
+                <div class="col">
+                    <span id="cardTitle">Dados x</span>
+                    <svg width="223" height="139" viewBox="0 0 223 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="1" width="222" height="137" fill="#C4C4C4"/>
+                        <line x1="0.262583" y1="0.5745" x2="222.263" y2="137.575" stroke="black"/>
+                        <line x1="222.263" y1="1.4255" x2="0.262599" y2="138.425" stroke="black"/>
+                    </svg>    
+                </div>
+                <div class="col">
+                    <span id="cardTitle">Dados x</span>
+                    <svg width="223" height="139" viewBox="0 0 223 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="1" width="222" height="137" fill="#C4C4C4"/>
+                        <line x1="0.262583" y1="0.5745" x2="222.263" y2="137.575" stroke="black"/>
+                        <line x1="222.263" y1="1.4255" x2="0.262599" y2="138.425" stroke="black"/>
+                    </svg>    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <span id="cardTitle">Dados x</span>
+                    <svg width="223" height="139" viewBox="0 0 223 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="1" width="222" height="137" fill="#C4C4C4"/>
+                        <line x1="0.262583" y1="0.5745" x2="222.263" y2="137.575" stroke="black"/>
+                        <line x1="222.263" y1="1.4255" x2="0.262599" y2="138.425" stroke="black"/>
+                    </svg>    
+                </div>
+                <div class="col">
+                    <span id="cardTitle">Dados x</span>
+                    <svg width="223" height="139" viewBox="0 0 223 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="1" width="222" height="137" fill="#C4C4C4"/>
+                        <line x1="0.262583" y1="0.5745" x2="222.263" y2="137.575" stroke="black"/>
+                        <line x1="222.263" y1="1.4255" x2="0.262599" y2="138.425" stroke="black"/>
+                    </svg>    
+                </div>
+                <div class="col">
+                    <span id="cardTitle">Dados x</span>
+                    <svg width="223" height="139" viewBox="0 0 223 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="1" width="222" height="137" fill="#C4C4C4"/>
+                        <line x1="0.262583" y1="0.5745" x2="222.263" y2="137.575" stroke="black"/>
+                        <line x1="222.263" y1="1.4255" x2="0.262599" y2="138.425" stroke="black"/>
+                    </svg>    
+                </div>
+                <div class="col">
+                    <span id="cardTitle">Dados x</span>
+                    <svg width="223" height="139" viewBox="0 0 223 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="1" width="222" height="137" fill="#C4C4C4"/>
+                        <line x1="0.262583" y1="0.5745" x2="222.263" y2="137.575" stroke="black"/>
+                        <line x1="222.263" y1="1.4255" x2="0.262599" y2="138.425" stroke="black"/>
+                    </svg>    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <span id="cardTitle">Dados x</span>
+                    <svg width="223" height="139" viewBox="0 0 223 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="1" width="222" height="137" fill="#C4C4C4"/>
+                        <line x1="0.262583" y1="0.5745" x2="222.263" y2="137.575" stroke="black"/>
+                        <line x1="222.263" y1="1.4255" x2="0.262599" y2="138.425" stroke="black"/>
+                    </svg>    
+                </div>
+                <div class="col">
+                    <span id="cardTitle">Dados x</span>
+                    <svg width="223" height="139" viewBox="0 0 223 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="1" width="222" height="137" fill="#C4C4C4"/>
+                        <line x1="0.262583" y1="0.5745" x2="222.263" y2="137.575" stroke="black"/>
+                        <line x1="222.263" y1="1.4255" x2="0.262599" y2="138.425" stroke="black"/>
+                    </svg>    
+                </div>
+                <div class="col">
+                    <span id="cardTitle">Dados x</span>
+                    <svg width="223" height="139" viewBox="0 0 223 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="1" width="222" height="137" fill="#C4C4C4"/>
+                        <line x1="0.262583" y1="0.5745" x2="222.263" y2="137.575" stroke="black"/>
+                        <line x1="222.263" y1="1.4255" x2="0.262599" y2="138.425" stroke="black"/>
+                    </svg>    
+                </div>
+                <div class="col">
+                    <span id="cardTitle">Dados x</span>
+                    <svg width="223" height="139" viewBox="0 0 223 139" fill="none" xmlns="http://www.w3.org/a2000/svg">
+                        <rect y="1" width="222" height="137" fill="#C4C4C4"/>
+                        <line x1="0.262583" y1="0.5745" x2="222.263" y2="137.575" stroke="black"/>
+                        <line x1="222.263" y1="1.4255" x2="0.262599" y2="138.425" stroke="black"/>
+                    </svg>    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include "accounts/footer.html" %}    
+</body>

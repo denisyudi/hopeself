@@ -9,7 +9,7 @@ urlpatterns = [
     path('pacienteconfirm', views.paciente_confirm),
 
     path('adminregister', views.admin_register),
-    path('medicoregister', views.medico_register,name='medicoregister'),
+    path('medicoregister', views.medico_register, name='medicoregister'),
     path('pacienteregister', views.paciente_register),
 
     path('adminlogin', LoginView.as_view(template_name='accounts/adminlogin.html')),
@@ -19,19 +19,25 @@ urlpatterns = [
     path('afterlogin', views.after_login, name='afterlogin'),
     path('logout', LogoutView.as_view(template_name='accounts/index.html'), name='logout'),
 
+    #admin
     path('admin-main', views.admin_main, name='admin-main'),
     path('admin-medicos', views.admin_medicos, name='admin-medicos'),
-    path('admin-lista-medicos', views.admin_lista_medicos, name='admin-lista-medicos'),
-    path('admin-aceita-medico', views.admin_aceita_medico, name='admin-aceita-medico'),
-    path('aceita-medico/<int:pk>', views.aceita_medico, name='aceita-medico'),
     path('admin-pacientes', views.admin_pacientes, name='admin-pacientes'),
-    path('admin-lista-pacientes', views.admin_lista_pacientes, name='admin-lista-pacientes'),
-    path('admin-consultas', views.admin_consultas, name='admin-consultas'),
-    path('admin-lista-consultas', views.admin_lista_consultas, name='admin-lista-consultas'),
+    path('admin-notificacoes', views.admin_notificacoes, name='admin-notificacoes'),
+    path('admin-dados', views.admin_dados, name='admin-dados'),
 
     #medico
     path('medico-main', views.medico_main, name='medico-main'),
-
     path('medico-pacientes', views.medico_pacientes, name='medico-pacientes'),
-    path('medico-lista-pacientes', views.medico_lista_pacientes, name='medico-lista-pacientes'),
+    path('medico-consultas', views.medico_consultas, name='medico-consultas'),
+    path('medico-notificacoes', views.medico_notificacoes, name='medico-notificacoes'),
+    path('medico-dados', views.medico_dados, name='medico-dados'),
+    
+    #paciente
+    path('paciente-main', views.paciente_main, name='paciente-main'),
+    path('paciente-consultas', views.paciente_consultas, name='paciente-consultas'),
+    path('paciente-notificacoes', views.paciente_notificacoes, name='paciente-notificacoes'),
+    path('paciente-historico', views.paciente_historico, name='paciente-historico'),
+    path('paciente-agendar-consulta', views.paciente_agendar_consulta, name='paciente-agendar-consulta'),
+    path('paciente-dados', views.paciente_dados, name='paciente-dados'),
 ]

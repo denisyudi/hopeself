@@ -3,102 +3,160 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>LazyCoder || sumit</title>
-
-
-  <style type="text/css">
-    body {
-      color: #aa082e;
-      background-color: #b6bde7;
-      font-family: 'Roboto', sans-serif;
-    }
-
-    a:link {
-      text-decoration: none;
-    }
-
-    .note {
+    <meta charset="utf-8">
+    <title>Login</title>
+    <style>
+          
+    .panel-heading {
+      font-size: 35px;
+      padding-bottom: 40px;
+      margin: auto;
       text-align: center;
-      height: 80px;
-      background: -webkit-linear-gradient(left, #0072ff, #8811c5);
-      color: #fff;
-      font-weight: bold;
-      line-height: 80px;
     }
 
-    .form-content {
-      padding: 5%;
-      border: 1px solid #ced4da;
-      margin-bottom: 2%;
+    a {
+      text-decoration: none !important;
+      color: #000;
     }
 
+    .form-control::placeholder {
+        color: #000 !important;
+        font-size: 18px;
+    }
+    
     .form-control {
-      border-radius: 1.5rem;
+        border: none !important;
+        border-bottom: 1px solid !important;
+        background-color: transparent;
+        width: 10% !important;
     }
 
-    .btnSubmit {
-      border: none;
-      border-radius: 1.5rem;
-      padding: 1%;
-      width: 20%;
-      cursor: pointer;
-      background: #0062cc;
-      color: #fff;
+    .col-lg-4{
+        background-color: rgb(187, 187, 187);
+        border-radius: 10px;
+        padding: 30px 25px;
     }
-  </style>
+
+    div.btn-login{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .input-group{
+        width: 80%;
+        margin: auto !important;
+        padding: 5px;
+    }
+
+    .btn-entrar{
+        border: solid #fff 2px;
+        padding: 10px 160px;
+        border-radius: 30px;
+        background-color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .btn-entrar:hover{
+        background-color: rgb(187, 187, 187);
+        border: solid black 2px;
+    }
+
+    p.text-separator{
+        text-align: center;
+        color: black;
+    }
+
+    div.btn-social{
+        width: 80%;
+        margin: auto;
+        padding: 15px 0;
+    }
+    .log-face{
+        display: block;
+        width: 100%;
+        text-align: center;
+        border: solid #000 2px;
+        padding: 10px 0;
+        border-radius: 30px;
+        background-color: rgb(187, 187, 187);
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .log-face:hover{
+        background-color: #3b5998;
+        color: #fff !important;
+        border: solid #3b5998 2px;
+    }
+    
+    .log-gmail{
+        display: block;
+        width: 100%;
+        text-align: center;
+        border: solid #000 2px;
+        padding: 10px 0;
+        border-radius: 30px;
+        background-color: rgb(187, 187, 187);
+        font-size: 20px;
+        font-weight: bold;  
+    }
+
+    .log-gmail:hover{
+      background-color: #bb001b;
+      color: #fff !important;
+      border: solid #bb001b 2px;
+    }
+    </style>
 
 </head>
 
 <body>
-  {% include "accounts/navbar.html" %}
-  <br>
-  <br>
-  <br><br>
-
-  <!--- login page for patient by admin(sumit)  ---------->
-  <form method="post">
-    {% csrf_token %}
-    <div class="container register-form">
-      <div class="form">
-        <div class="note">
-          <p>Patient Login Page</p>
-        </div>
-
-        <div class="form-content">
-          <div class="row">
-            <div class="col-md-6">
-
-              <div class="form-group">
-                {% render_field form.username class="form-control" placeholder="Username" %}
-              </div>
-
+    {% include "accounts/navbar.html" %}
+    <br>
+    <form method="post">
+        {% csrf_token %}
+        <div class="container register-form">
+           <div class="form">
+                <div class="form-content">
+                    <div class="row">
+                        <div class="container login col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4">
+                        <br />
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <a href="/pacientelogin" class="title-login">Login</a>
+                                </div>
+                                <div class="panel-body">
+                                    <form class="formulario">
+                                        <div class="input-group">                   
+                                            {% render_field form.username class="form-control" placeholder="Username" %}
+                                        </div>
+                                        <div class="input-group">
+                                            {% render_field form.password class="form-control" placeholder="Senha" %}
+                                        </div>
+                                        <div class="btn-login">
+                                            <button class="btn btn-xm btn-block btn-entrar" type="submit" >Login</button>
+                                        </div>
+                                        <div class="separator-entre">
+                                            <p class="text-separator"> - ou entre com - </p>
+                                        </div>
+                                        <div class="btn-social"><a class="log-face" href="https://www.facebook.com/">Facebook</a></div>
+                                        <div class="btn-social"><a class="log-gmail" href="https://www.gmail.com/">Google</a></div>
+                                    </form>
+            
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-
-              <div class="form-group">
-                {% render_field form.password class="form-control" placeholder="Password" %}
-              </div>
-
-            </div>
-          </div>
-          <button type="submit" class="btnSubmit">Login</button>
-          <div class="text-center">Do not have account? <a href="pacienteregister">Signup here</a></div>
         </div>
-      </div>
-    </div>
-
-  </form>
-
-  <br><br><br>
-  <!--
-  developed By : sumit kumar
-  facebook : fb.com/sumit.luv
-  youtube : youtube.com/lazycoders
-  -->
-
-  {% include "accounts/footer.html" %}
+    </form>
+    <br>
+    {% include "accounts/footer.html" %}
 </body>
 
 </html>
