@@ -9,6 +9,7 @@
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       max-width: 200px;
       margin: auto;
+      padding: 5px;
       text-align: center;
       font-family: sans-serif;
     }
@@ -42,12 +43,23 @@
       padding: 10px;
     }
 
+
+    .grid-item {
+      margin: 0px;
+
+    }
+
     a:link {
       text-decoration: none;
     }
 
     a {
       color: white;
+
+    }
+
+    img {
+      width: 98%;
     }
   </style>
 </head>
@@ -57,26 +69,26 @@
   <div class="grid-container">
     <div class="grid-item">
       <div class="card">
-        <img src="{% static 'images/admin.png' %}" alt="Admin" style="width:100%">
+        <img src="{% static 'images/admin.png' %}" alt="Admin">
         <p class="title">Admin</p>
-        <p><button><a href="/adminconfirm">Entre ou Cadastra-se</a></button></p>
+        <p><button><a href="/adminconfirm">Entre ou Cadastre-se</a></button></p>
       </div>
 
     </div>
 
     <div class="grid-item">
       <div class="card">
-        <img src="{% static 'images/medico.png' %}" alt="Médico" style="width:100%">
+        <img src="{% static 'images/medico.png' %}" alt="Médico">
         <p class="title">Médico</p>
-        <p><button><a href="/medicoconfirm">Entre ou Cadastra-se</a></button></p>
+        <p><button><a href="/medicoconfirm">Entre ou Cadastre-se</a></button></p>
       </div>
     </div>
 
     <div class="grid-item">
       <div class="card">
-        <img src="{% static 'images/paciente.png' %}" alt="Paciente" style="width:100%">
+        <img src="{% static 'images/paciente.png' %}" alt="Paciente">
         <p class="title">Paciente</p>
-        <p><button><a href="/pacienteconfirm">Entre ou Cadastra-se</a></button></p>
+        <p><button><a href="/pacienteconfirm">Entre ou Cadastre-se</a></button></p>
       </div>
     </div>
 
